@@ -269,6 +269,7 @@
     <div class="difficulty-container">
         <select id="difficulty-select">
             <option value="easy">EASY_MODE</option>
+            <option value="normal">NORMAL_MODE</option>
             <option value="god">GOD_MODE</option>
         </select>
     </div>
@@ -427,6 +428,14 @@
             if (difficulty === 'easy') {
                 const empty = gameState.map((v, i) => v === '' ? i : null).filter(v => v !== null);
                 moveIndex = empty[Math.floor(Math.random() * empty.length)];
+            } else if (difficulty === 'normal') {
+                // 50% chance for best move, 50% chance for random move
+                if (Math.random() > 0.5) {
+                    moveIndex = getBestMove();
+                } else {
+                    const empty = gameState.map((v, i) => v === '' ? i : null).filter(v => v !== null);
+                    moveIndex = empty[Math.floor(Math.random() * empty.length)];
+                }
             } else {
                 moveIndex = getBestMove();
             }
