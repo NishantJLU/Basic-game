@@ -1,0 +1,17 @@
+{
+  "name": "Cyberpunk Tic-Tac-Toe Pro",
+  "short_name": "CyberTTT",
+  "description": "Infinite Cyberpunk Tic-Tac-Toe with God Mode AI.",
+  "start_url": "tictactoe.html",
+  "display": "standalone",
+  "background_color": "#02040a",
+  "theme_color": "#02040a",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/566/566312.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
