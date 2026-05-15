@@ -1,45 +1,55 @@
-# Cyberpunk Tic-Tac-Toe Pro
+# Cyberpunk Tic-Tac-Toe Pro: Modern Edition
 
-A visually stunning, high-performance Progressive Web App (PWA) edition of Tic-Tac-Toe, set in a neon-drenched cyberpunk future.
+A visually stunning, high-stakes Tic-Tac-Toe battleground built with React, TypeScript, and Node.js, set in a neon-drenched cyberpunk future.
 
 ![Cyberpunk Theme](https://img.shields.io/badge/Theme-Cyberpunk-00f2ff?style=for-the-badge)
 ![PWA Ready](https://img.shields.io/badge/PWA-Ready-ff007f?style=for-the-badge)
 
 ## 🚀 Features
 
-- **Cyberpunk Aesthetics:** Neon glows, glitch effects, and a dynamic grid background.
-- **Advanced AI:**
-  - **EASY_MODE:** For a casual game.
-  - **GOD_MODE:** Uses the Minimax algorithm for an unbeatable challenge.
-- **PWA Support:** Installable on mobile and desktop devices with offline capabilities via Service Workers.
-- **Persistent Data:** Saves your scores, match history, custom username, and theme preferences locally.
-- **Interactive Audio:** Retro-synth sound effects for moves, wins, and resets.
-- **Customization:**
-  - **Theme Toggle:** Switch between high-contrast Dark and Light modes.
-  - **Username Editing:** Click your name to personalize your profile.
-- **Match Log:** Keep track of your last 5 encounters with the system.
+- **Advanced CPU Opponent:**
+  - **EASY:** Casual play.
+  - **NORMAL:** A mix of smart and random moves.
+  - **GOD:** Unbeatable AI using the Minimax algorithm.
+- **Game Modes:**
+  - `3x3_CLASSIC`: The traditional grid.
+  - `10x10_MEGA`: First to 5 in a row wins.
+  - `ULTIMATE`: Nested 3x3 grids for high-level strategy.
+- **Online Multiplayer:** Establish uplinks via Room Codes.
+- **System Diagnostics:** Post-match momentum analysis and archetype detection.
+- **Cyberpunk UI:** CRT effects, SVG neon animations, and high-performance interactive feedback.
+- **Persistent Data:** Saves your scores, match history, and theme preferences.
 
 ## 🛠️ Technology Stack
 
-- **HTML5/CSS3:** Vanilla implementation with CSS variables and animations.
-- **JavaScript (ES6):** Pure JS logic for the game engine and AI.
-- **PWA:** `manifest.json` and `sw.js` (Service Worker).
-- **Web Audio API:** For real-time synthesized sound effects.
+- **Frontend:** React 19, TypeScript, Vite, Redux Toolkit, Recharts.
+- **Backend:** Node.js, Express, Socket.io.
+- **Styling:** Vanilla CSS with neon glow and glitch effects.
 
-## 🎮 How to Play
+## 🎮 How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/NishantJLU/Basic-game.git
-   ```
-2. Open `tictactoe.html` in any modern web browser.
-3. (Optional) Install as an app by clicking the "Install" icon in your browser's address bar.
+### 1. Install Dependencies
+```bash
+# In the root directory
+npm install
+cd client && npm install
+cd ../server && npm install
+```
 
-## 📁 Project Structure
+### 2. Start the Server
+```bash
+cd server
+npm run dev
+```
 
-- `tictactoe.html`: Main game interface and logic.
-- `manifest.json`: Web app manifest for PWA functionality.
-- `sw.js`: Service worker for asset caching and offline support.
+### 3. Start the Client
+```bash
+cd client
+npm run dev
+```
+
+The game will be available at `http://localhost:5173`.
+The server runs on `http://localhost:3001`.
 
 ## 📜 License
 

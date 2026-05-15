@@ -1,0 +1,96 @@
+:root {
+    --bg-color: #02040a;
+    --glass-bg: rgba(6, 10, 23, 0.9);
+    --neon-x: #00f2ff;
+    --neon-o: #ff007f;
+    --neon-win: #39ff14;
+    --text-main: #e2e8f0;
+    --border-glow: rgba(0, 242, 255, 0.15);
+    --grid-color: rgba(0, 242, 255, 0.05);
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+    --crt-opacity: 0.03;
+}
+
+body.light-mode {
+    --bg-color: #e2e8f0; 
+    --glass-bg: #ffffff; 
+    --neon-x: #0369a1;
+    --neon-o: #be123c;
+    --neon-win: #166534;
+    --text-main: #0f172a;
+    --border-glow: #cbd5e1;
+    --grid-color: rgba(0, 0, 0, 0.1);
+    --crt-opacity: 0.01;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* CRT Overlay */
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 1000;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    opacity: var(--crt-opacity);
+}
+
+/* Dynamic Background Grid */
+.bg-grid {
+    position: fixed;
+    top: 0; left: 0; width: 200%; height: 200%;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg) translateY(-50%);
+    animation: gridMove 20s linear infinite;
+    z-index: -1; pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% { transform: perspective(500px) rotateX(60deg) translateY(-50%) translateZ(0); }
+    100% { transform: perspective(500px) rotateX(60deg) translateY(-50%) translateZ(50px); }
+}
+
+/* Flicker Animation */
+.flicker { animation: flickerAnim 2s infinite; }
+@keyframes flickerAnim {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+    20%, 22%, 24%, 55% { opacity: 0.4; }
+}
+
+/* Aberration Effect */
+body.aberration {
+    animation: aberrationMove 0.2s infinite;
+}
+@keyframes aberrationMove {
+    0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+    50% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+.glitch-effect { animation: glitch 0.2s cubic-bezier(.25,.46,.45,.94) both 3; }
