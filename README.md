@@ -1,71 +1,32 @@
-# 🌌 Cyberpunk Tic-Tac-Toe Pro
+# Cyberpunk Tic-Tac-Toe
+**A futuristic, high-stakes version of the classic game with PWA support and multiple game modes.**
 
-[![Theme: Cyberpunk](https://img.shields.io/badge/Theme-Cyberpunk-00f2ff?style=for-the-badge)](https://github.com/NishantJLU/Basic-game)
-[![Engine: React 19](https://img.shields.io/badge/Engine-React_19-ff007f?style=for-the-badge)](https://github.com/NishantJLU/Basic-game)
-[![Multiplayer: Socket.io](https://img.shields.io/badge/Multiplayer-Socket.io-yellow?style=for-the-badge)](https://github.com/NishantJLU/Basic-game)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-A high-performance, visually immersive Tic-Tac-Toe ecosystem set in a neon-drenched cyberpunk future. Experience classic gameplay evolved with advanced AI, massive grids, and nested strategic layers.
+## 🎮 Game Features
+- **Classic Mode**: The traditional 3x3 Tic-Tac-Toe we all know.
+- **Ultimate Mode**: A nested version of the game where each square is its own 3x3 board. Win small boards to win the master board!
+- **Multiplayer**: Play against a friend locally or use the multiplayer features.
+- **Cyberpunk Aesthetics**: Immersive neon UI with "aberration" effects and futuristic sounds.
+- **PWA Ready**: Install the game directly on your device for offline play.
 
----
+## 🕹️ How to Play
+1. **Classic**: Get three of your marks (X or O) in a row, column, or diagonal.
+2. **Ultimate**: To win the master board, you must win the small boards. The square your opponent chooses in a small board determines which small board you must play in next.
 
-## 🚀 Key Features
+## 🛠️ Tech Stack
+- **Frontend**: React, TypeScript, Vite.
+- **State Management**: Redux Toolkit (based on file structure).
+- **Styling**: Custom CSS with neon-glow effects.
+- **Offline**: Service Workers for PWA functionality.
 
-### 🤖 Advanced Neural Link (CPU Opponent)
-Battle against a sophisticated AI with three distinct difficulty levels:
-- **EASY:** Relaxed pattern matching for casual testing.
-- **NORMAL:** A dynamic blend of optimal strategy and unpredictable heuristic moves.
-- **GOD:** Driven by the **Minimax Algorithm**. It analyzes every possible future state to ensure it never loses. Can you force a stalemate?
+## 🚀 Deployment
+This game is ready to be hosted on GitHub Pages or Vercel.
 
-### 🎮 Multiple Simulation Modes
-- **3x3_CLASSIC:** The pure, traditional data-link.
-- **10x10_MEGA:** An expanded battlefield. Connect 5 nodes in any direction to achieve victory.
-- **ULTIMATE:** High-level strategy where every cell in the 3x3 grid is itself a 3x3 board. Win small boards to conquer the master grid.
+**Play now:** [Live Demo](https://NishantJLU.github.io/Basic-game/) (requires GitHub Pages enabled)
 
-### 🌐 Global Uplink (Multiplayer)
-- **Real-time Sync:** Powered by Socket.io for near-zero latency moves.
-- **Room System:** Generate unique access codes to challenge friends across the network.
-
-### 🎨 Visual & Audio Interface
-- **Cyberpunk UI:** CRT scanlines, glitch transitions, and interactive neon SVG animations.
-- **Real-time Diagnostics:** Watch the system analyze match momentum and player archetypes as you play.
-- **Responsive Design:** Fully optimized for mobile deck or desktop terminals.
-
----
-
-## 🛠️ Technology Stack
-
-- **Frontend:** `React 19`, `TypeScript`, `Vite`, `Redux Toolkit` (State Management), `Recharts` (Analytics).
-- **Backend:** `Node.js`, `Express`, `Socket.io`.
-- **Logic:** Custom Minimax implementation for optimal AI decision-making.
-
----
-
-## 🔌 System Setup
-
-### 1. Prerequisite
-Ensure you have `Node.js` (v18+) installed on your terminal.
-
-### 2. Initialize Backend (Server)
-```bash
-cd server
-npm install
-npm run dev
-```
-*The server will initialize on `http://localhost:3001`.*
-
-### 3. Initialize Frontend (Client)
-```bash
-# In a new terminal tab
-cd client
-npm install
-npm run dev
-```
-*The uplink will be available at `http://localhost:5173`.*
-
----
-
-## 📜 License
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-*Created for the neon-drenched future of gaming.*
+## 🤝 Contributing
+Found a glitch in the matrix? Submit a PR!
